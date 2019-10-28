@@ -1,6 +1,7 @@
 # Print "Hello, world!" to your terminal
 
-def helloWorld ():
+def helloworld ():
     print("Hello, world!")
 
-helloWorld()
+
+helloworld()
