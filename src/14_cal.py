@@ -22,3 +22,33 @@ and does the following:
 import sys
 import calendar
 from datetime import datetime
+
+
+def getmonth ( input ):
+    if len(input) > 1:
+        x = int(input[1])
+        if x <= 12 and x >= 1:
+            return x
+        else:
+            print("Month input needs to be between 1 and 12.")
+            return datetime.today().month
+    else:
+        return datetime.today().month
+
+
+def getyear(input):
+    if(len(input) >2):
+        x = int(input[2])
+        return x
+    else:
+        return datetime.today().year
+
+month = getmonth(sys.argv)
+year = getyear(sys.argv)
+
+if len(sys.argv) > 3:
+    print(f"Only two arguments will be accepted: month and year(optional). "
+          f"Month should be between 1 and 12. Year should be the four digit "
+          f"year.")
+else:
+    print(calendar.month(year, month))
