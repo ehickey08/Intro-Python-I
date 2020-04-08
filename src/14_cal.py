@@ -36,12 +36,13 @@ def getmonth ( input ):
         return datetime.today().month
 
 
-def getyear(input):
-    if(len(input) >2):
+def getyear ( input ):
+    if (len(input) > 2):
         x = int(input[2])
         return x
     else:
         return datetime.today().year
+
 
 month = getmonth(sys.argv)
 year = getyear(sys.argv)
